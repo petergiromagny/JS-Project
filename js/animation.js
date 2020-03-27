@@ -31,8 +31,7 @@ var java = document.getElementsByName('java');
 var link = document.getElementById('myLink'),
 	href = link.href;
 
-//alert(href);
-link.href = 'https://www.google.fr/';
+//link.href = 'https://www.google.fr/';
 
 /**********AJOUTER UNE CLASS***********/
 //document.getElementById('myNav').className = 'blue';
@@ -40,12 +39,24 @@ link.href = 'https://www.google.fr/';
 var nav 	= document.querySelector('nav'),
 	result 	= '';
 
-alert(nav.classList);
-
-nav.classList.add('blue');
+//nav.classList.add('js-template');
 
 for (var i = 0; i < nav.classList.length; i++) {
 	result += '.' + nav.classList[i] + '\n';
 }
 
-alert(result);
+/* NAVIGUER ENTRE LES NOEUDS */
+
+var paragraphe = document.getElementById('mySpan');
+
+//alert(paragraphe.nodeType +'\n\n'+ paragraphe.nodeName.toLowerCase());
+
+/* CREATION ET INSERTION DES ELEMENTS */
+var newLink = document.createElement('a');
+
+//newLink.id    = 'sdz_link';
+//newLink.href  = 'http://www.siteduzero.com';
+//newLink.title = 'Découvrez le Site du Zéro !';
+//newLink.setAttribute('tabindex', '10');
+
+document.getElementById('myP').appendChild(newLink);

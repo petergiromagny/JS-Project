@@ -1,4 +1,20 @@
-.blue {
-  background-color: royalblue !important; }
+.js-template {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  font-weight: 700; }
+
+.btn-js, .btn-js:active {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  font-weight: 600;
+  transition: 0.3s; }
+
+.btn-js:hover {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.3s; }
+
+.btn-js:focus {
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s; }
 
 /*# sourceMappingURL=style.css.map */
