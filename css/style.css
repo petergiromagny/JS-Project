@@ -3,7 +3,10 @@
   color: #000000 !important;
   font-weight: 700; }
 
-.btn-js, .btn-js:active {
+.vertical-align {
+  margin: 0; }
+
+.btn-js {
   background-color: #ffff00 !important;
   color: #000000 !important;
   font-weight: 600;
@@ -13,7 +16,7 @@
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
   transition: 0.3s; }
 
-.btn-js:focus {
+.btn-js:active {
   box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
   transition: 0.3s; }
 

@@ -30,36 +30,42 @@
 	</div>
 </nav>
 <div class="jumbotron">
-	<h1 class="display-4">Hello, world!</h1>
-	<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+	<h1 class="display-4">Deviner un nombre</h1>
 	<hr class="my-4">
-	<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-	<a id="myLink" class="btn btn-js btn-lg" href="#" role="button">Learn more</a>
-	<hr class="my-4">
-	<div id="menu">
+	<p class="lead">Nous avons généré un nombre aléatoire entre 1 et 100, tentez de le deviner en 10 tours maximum. Pour chaque tentative, nous vous dirons si votre estimation est trop ou pas assez élevée.
+	</p>
 
-		<div class="item">
-			<span>Élément 1</span><br>
-			<span>Élément 2</span><br>
+	<form class="form-inline mt-4">
+		<div >
+			<p class="vertical-align">Entrez votre proposition :</p>
 		</div>
-
-		<div class="pub mt-3 mb-3">
-			<span>Élément 3</span><br>
-			<span>Élément 4</span><br>
+		<div class="form-group mx-sm-3">
+			<label for="guessField" class="sr-only">proposition</label>
+			<input type="text" class="form-control guessField" id="guessField">
 		</div>
+		<button type="submit" id="myBtn" class="btn guessSubmit">Valider</button>
+	</form>
 
+	<div class="mt-4">
+		<p class="alert <!--alert-success--> guesses w-50" role="alert"></p>
+		<p class="alert <!--alert-danger--> lastResult w-50" role="alert"></p>
+		<p class="alert <!--alert-warning--> lowOrHi w-50" role="alert"></p>
 	</div>
 
-	<div id="contenu">
-		<span id="mySpan">Introduction au contenu de la page...</span><br>
+	<!--<div class="form">
+		<label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+		<input type="submit" value="Submit guess" class="guessSubmit">
 	</div>
-	<hr class="my-4">
-	<div>
-		<p id="myP">Un peu de texte <a>et un lien</a></p>
-	</div>
+
+	<div class="resultParas">
+		<p class="guesses"></p>
+		<p class="lastResult"></p>
+		<p class="lowOrHi"></p>
+	</div>-->
+
 </div>
 
-<script src="js/animation.js"></script>
+<script src="js/mdn.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
