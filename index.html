@@ -10,10 +10,7 @@
 <body>
 <!-- Image and text -->
 <nav id="myNav" class="navbar js-template navbar-light navbar-expand-lg">
-	<a class="navbar-brand" href="#">Navbar</a>
-	<!--<button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>-->
+	<a class="navbar-brand" href="">Navbar</a>
 
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
@@ -29,13 +26,13 @@
 		</ul>
 	</div>
 </nav>
-<div class="jumbotron">
+<div class="jumbotron" id="body">
 	<h1 class="display-4">Deviner un nombre</h1>
 	<hr class="my-4">
 	<p class="lead">Nous avons généré un nombre aléatoire entre 1 et 100, tentez de le deviner en 10 tours maximum. Pour chaque tentative, nous vous dirons si votre estimation est trop ou pas assez élevée.
 	</p>
 
-	<form class="form-inline mt-4">
+	<div class="form-inline mt-4">
 		<div >
 			<p class="vertical-align">Entrez votre proposition :</p>
 		</div>
@@ -43,29 +40,16 @@
 			<label for="guessField" class="sr-only">proposition</label>
 			<input type="text" class="form-control guessField" id="guessField">
 		</div>
-		<button type="submit" id="myBtn" class="btn guessSubmit">Valider</button>
-	</form>
-
-	<div class="mt-4">
-		<p class="alert <!--alert-success--> guesses w-50" role="alert"></p>
-		<p class="alert <!--alert-danger--> lastResult w-50" role="alert"></p>
-		<p class="alert <!--alert-warning--> lowOrHi w-50" role="alert"></p>
+		<input type="submit" value="Valider" id="myBtn" class="btn guessSubmit">
 	</div>
 
-	<!--<div class="form">
-		<label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
-		<input type="submit" value="Submit guess" class="guessSubmit">
+	<div class="mt-4 resultParas">
+		<p class="alert guesses w-50" role="alert"></p>
+		<p class="alert lastResult w-50" role="alert"></p>
+		<p class="alert lowOrHi w-50" role="alert"></p>
 	</div>
-
-	<div class="resultParas">
-		<p class="guesses"></p>
-		<p class="lastResult"></p>
-		<p class="lowOrHi"></p>
-	</div>-->
-
 </div>
 
 <script src="js/mdn.js"></script>
-<script src="js/bootstrap.js"></script>
 </body>
 </html>
