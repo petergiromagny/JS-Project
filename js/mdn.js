@@ -1,22 +1,10 @@
-//Générer "Element x" en appuyant sur un bouton
-/*let link = document.getElementById('#');
-
-link.addEventListener('click', createPara);
-
-function createPara() {
-	let para = document.createElement('span');
-	para.textContent = 'Element n°x';
-	document.body.appendChild(para);
-}*/
-
 /**
  *
  * 		DEVINER UN NOMBRE
  *
  */
 
-//let randomNumber = Math.floor(Math.random() * 100);
-let randomNumber = 15;
+let randomNumber = Math.floor(Math.random() * 100);
 
 let guesses = document.querySelector('.guesses');
 let lastResult = document.querySelector('.lastResult');
@@ -107,3 +95,52 @@ function resetGame() {
 }
 
 //https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/A_first_splash
+
+/*
+*
+*  Gérer une liste et l'afficher
+*
+*  Chaine remis en place
+*/
+
+/*var list = document.querySelector('.greetings ul');
+let cityDefault = [
+					'lonDon',
+					'ManCHESTer',
+					'BiRmiNGHAM',
+					'liVERpoOL'
+				];
+
+for (var i = 0; i < cityDefault.length; i++){
+	var result = cityDefault[i].toLowerCase();
+	var firstLetter = result.substr(0,1).toUpperCase();
+	var otherLetter = result.substr(1, result.length);
+	var listCity = document.createElement('li');
+
+	listCity.textContent = firstLetter + otherLetter;
+	list.appendChild(listCity);
+}*/
+
+/*
+* Récupération charactére
+*/
+
+var listInfo = document.querySelector('.greetings ul');
+let trainInfo = [
+					'MAN675847583748sjt567654;Manchester Piccadilly',
+					'GNF576746573fhdg4737dh4;Greenfield',
+					'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+					'SYB4f65hf75f736463;Stalybridge',
+					'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'
+				];
+
+for (var j = 0; j < trainInfo.length; j++){
+	var oneInfo = trainInfo[j];
+	var listInfoFinal = document.createElement('li');
+	var cityName = oneInfo.substring(0, 3);
+	var nbrPoint = oneInfo.indexOf(';');
+	var stationName = oneInfo.substr(nbrPoint + 1, oneInfo.length);
+
+	listInfoFinal.textContent = cityName + ' : ' + stationName;
+	listInfo.appendChild(listInfoFinal);
+}
