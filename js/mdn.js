@@ -103,7 +103,9 @@ function resetGame() {
 *  Chaine remis en place
 */
 
-/*var list = document.querySelector('.greetings ul');
+let list = document.querySelector('.list-1');
+let resultList = document.querySelector('.result-1');
+
 let cityDefault = [
 					'lonDon',
 					'ManCHESTer',
@@ -111,21 +113,27 @@ let cityDefault = [
 					'liVERpoOL'
 				];
 
-for (var i = 0; i < cityDefault.length; i++){
-	var result = cityDefault[i].toLowerCase();
-	var firstLetter = result.substr(0,1).toUpperCase();
-	var otherLetter = result.substr(1, result.length);
-	var listCity = document.createElement('li');
+for (let i = 0; i < cityDefault.length; i++){
+	let result = cityDefault[i].toLowerCase();
+	let firstLetter = result.substr(0,1).toUpperCase();
+	let otherLetter = result.substr(1, result.length);
+	let listCity = document.createElement('p');
+	let resultListCity = document.createElement('p');
 
-	listCity.textContent = firstLetter + otherLetter;
+	listCity.textContent = cityDefault[i];
+	resultListCity.textContent = firstLetter + otherLetter;
 	list.appendChild(listCity);
-}*/
+	resultList.appendChild(resultListCity);
+
+}
 
 /*
 * Récupération charactére
 */
 
-var listInfo = document.querySelector('.greetings ul');
+let listInfoStation = document.querySelector('.list-2')
+let resultListInfoStation = document.querySelector('.result-2');
+
 let trainInfo = [
 					'MAN675847583748sjt567654;Manchester Piccadilly',
 					'GNF576746573fhdg4737dh4;Greenfield',
@@ -134,13 +142,16 @@ let trainInfo = [
 					'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'
 				];
 
-for (var j = 0; j < trainInfo.length; j++){
-	var oneInfo = trainInfo[j];
-	var listInfoFinal = document.createElement('li');
-	var cityName = oneInfo.substring(0, 3);
-	var nbrPoint = oneInfo.indexOf(';');
-	var stationName = oneInfo.substr(nbrPoint + 1, oneInfo.length);
+for (let j = 0; j < trainInfo.length; j++){
+	let oneInfo = trainInfo[j];
+	let listInfoFinal = document.createElement('p');
+	let resultListInfoFinal = document.createElement('p');
+	let cityName = oneInfo.substring(0, 3);
+	let nbrPoint = oneInfo.indexOf(';');
+	let stationName = oneInfo.substr(nbrPoint + 1, oneInfo.length);
 
-	listInfoFinal.textContent = cityName + ' : ' + stationName;
-	listInfo.appendChild(listInfoFinal);
+	listInfoFinal.textContent = oneInfo;
+	resultListInfoFinal.textContent = cityName + ' : ' + stationName;
+	listInfoStation.appendChild(listInfoFinal);
+	resultListInfoStation.appendChild(resultListInfoFinal);
 }
