@@ -8,7 +8,7 @@
     <title>JS Project</title>
 </head>
 <body>
-<!-- Image and text -->
+	<!-- **************************NAVBAR********************************* -->
 <nav id="myNav" class="navbar js-template navbar-light navbar-expand-lg">
 	<a class="navbar-brand" href="">Navbar</a>
 
@@ -52,6 +52,10 @@
 		<p class="alert lowOrHi w-50" role="alert"></p>
 	</div>
 
+	<div class="reset-btn">
+
+	</div>
+
 	<!-- **************************GERER UNE LISTE********************************* -->
 
 	<h1 class="display-4 mt-5">Gérer une liste et l'afficher</h1>
@@ -80,9 +84,43 @@
 		</div>
 	</div>
 
+	<!-- **************************GERER UN TABLEAU********************************* -->
+
+	<h1 class="display-4 mt-5">Gérer un tableau</h1>
+	<hr class="my-4">
+
+	<div class="products">
+		<div class="list-products">
+
+		</div>
+		<div class="total">
+			<h3></h3>
+		</div>
+	</div>
+
+	<!-- **************************LISTE DES RECHERCHES********************************* -->
+
+	<h1 class="display-4 mt-5">Liste des recherches</h1>
+	<hr class="my-4">
+
+	<div class="form-inline mt-4 search">
+		<div>
+			<p class="vertical-align">Faites votre recherche :</p>
+		</div>
+		<div class="form-group mx-sm-3">
+			<label for="searching" class="sr-only">recherche</label>
+			<input type="text" class="form-control searching" id="searching">
+		</div>
+		<button class="btn btn-js">Rechercher</button>
+	</div>
+	<div class="search-list">
+		<ul>
+
+		</ul>
+	</div>
 
 </div>
 
-<script src="js/mdn.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

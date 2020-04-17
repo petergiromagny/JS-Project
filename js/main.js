@@ -9,6 +9,7 @@ let randomNumber = Math.floor(Math.random() * 100);
 let guesses = document.querySelector('.guesses');
 let lastResult = document.querySelector('.lastResult');
 let lowOrHi = document.querySelector('.lowOrHi');
+let resetBtn = document.querySelector('.reset-btn');
 
 guesses.classList.add('d-none');
 lastResult.classList.add('d-none');
@@ -68,7 +69,7 @@ function setGameOver() {
 	resetButton = document.createElement('button');
 	resetButton.textContent = 'Démarrer une nouvelle partie';
 	resetButton.className = 'btn-js btn';
-	document.getElementById('body').appendChild(resetButton);
+	resetBtn.appendChild(resetButton);
 	resetButton.addEventListener('click', resetGame);
 }
 
@@ -94,13 +95,12 @@ function resetGame() {
 	randomNumber = Math.floor(Math.random() * 100) + 1;
 }
 
-//https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps/A_first_splash
-
 /*
 *
 *  Gérer une liste et l'afficher
 *
 *  Chaine remis en place
+*
 */
 
 let list = document.querySelector('.list-1');
@@ -154,4 +154,81 @@ for (let j = 0; j < trainInfo.length; j++){
 	resultListInfoFinal.textContent = cityName + ' : ' + stationName;
 	listInfoStation.appendChild(listInfoFinal);
 	resultListInfoStation.appendChild(resultListInfoFinal);
+}
+
+/*
+*
+*  Gérer un tableau
+*
+*  Afficher les produits
+*
+*/
+
+let listProducts = document.querySelector('.products .list-products');
+let totalList = document.querySelector('.products .total h3')
+let total = 0;
+let products = [
+					'Caleçons:6.99',
+					'Chaussettes:5.99',
+					'T-shirt:14.99',
+					'Pantalons:31.99',
+					'Chaussures:23.99'
+				];
+
+totalList.textContent = '';
+
+for (let i = 0; i < products.length; i++){
+
+	let subArray = products[i].split(':');
+	let nameProduct = subArray[0];
+	let priceProduct = Number(subArray[1]);
+	let itemText = nameProduct +' - '+ priceProduct +'$';
+	let listItem = document.createElement('p');
+
+	total += priceProduct;
+
+	listItem.textContent = itemText;
+	listProducts.appendChild(listItem);
+}
+
+totalList.textContent = 'Total : ' + total.toFixed(2) +'$';
+
+/*
+* Liste des recherches effectuée
+*/
+
+let listSearch = document.querySelector('.search-list ul');
+let searchInput = document.querySelector('.search input');
+let searchBtn = document.querySelector('.search button');
+let myHistory = [];
+
+listSearch.innerHTML = '';
+
+searchBtn.onclick = function() {
+	// we will only allow a term to be entered if the search input isn't empty
+	if (searchInput.value !== '') {
+		// add input value in array myHistory with push()
+		myHistory.push(searchInput.value);
+		// empty the list so that we don't display duplicate entries
+		// the display is regenerated every time a search term is entered.
+		listSearch.innerHTML = '';
+
+		// loop through the array, and display all the search terms in the list
+		for (var i = 0; i < myHistory.length; i++) {
+			itemText = myHistory[i];
+			var listItem = document.createElement('li');
+			listItem.textContent = itemText;
+			listSearch.appendChild(listItem);
+		}
+
+		// If the array length is 5 or more, remove the oldest search term
+		if (myHistory.length >= 5) {
+			// number 2
+			myHistory[0].pop();
+		}
+
+		// empty the search input and focus it, ready for the next term to be entered
+		searchInput.value = '';
+		searchInput.focus();
+	}
 }
