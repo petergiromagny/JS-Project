@@ -18,7 +18,7 @@ lowOrHi.classList.add('d-none');
 let guessSubmit = document.querySelector('.guessSubmit');
 let guessField = document.querySelector('.guessField');
 
-document.getElementById('myBtn').className = 'btn-js btn guessSubmit';
+document.getElementById('myBtn').className = 'btn-js js-template btn guessSubmit';
 
 let guessCount = 1;
 let resetButton;

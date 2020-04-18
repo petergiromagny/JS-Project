@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- **************************NAVBAR********************************* -->
-<nav id="myNav" class="navbar js-template navbar-light navbar-expand-lg">
+<nav id="navbar-js" class="navbar js-template navbar-light navbar-expand-lg">
     <div class="col-6 row">
         <a class="navbar-brand" href="index_home.html">Accueil</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -18,25 +18,63 @@
                     <a class="nav-link" href="index_first.html">Premier pas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index_second.html">Les blocs</a>
+                    <a class="nav-link active" href="index_second.html">Les blocs</a>
                 </li>
             </ul>
         </div>
     </div>
     <div class="col-6 text-right">
-        <a class="btn btn-js" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/JavaScript">MDN | JS</a>
+        <a class="btn btn-js js-template" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/JavaScript">MDN | JS</a>
     </div>
 </nav>
 
-<div class="jumbotron" id="body">
+<div class="jumbotron">
 
     <!-- **************************LES CONDITIONS********************************* -->
+    <div class="calendar">
+        <h1 class="display-4">Un calendrier simple</h1>
+        <hr class="my-4">
+        <p class="lead">Dans cet exemple nous allons vous aider à finaliser une application de calendrier simple.</p>
+        <label>
+            <select class="month custom-select">
+                <option value="default" selected>Choisir un mois...</option>
+                <option value="Janvier">Janvier</option>
+                <option value="Février">Février</option>
+                <option value="Mars">Mars</option>
+                <option value="Avril">Avril</option>
+                <option value="Mai">Mai</option>
+                <option value="Juin">Juin</option>
+                <option value="Juillet">Juillet</option>
+                <option value="Août">Août</option>
+                <option value="Septembre">Septembre</option>
+                <option value="Octobre">Octobre</option>
+                <option value="Novembre">Novembre</option>
+                <option value="Décembre">Décembre</option>
+            </select>
+        </label>
+        <div class="selected">
+            <div class="row">
+                <div class="col-6 m-auto">
+                    <p></p>
+                </div>
+                <div class="col-6">
+                    <ul class="row">
 
-    <h1 class="display-4">Les conditions</h1>
-    <hr class="my-4">
-    <p class="lead">Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres.</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- **************************CHANGER DE COULEUR********************************* -->
+    <div class="colors">
+        <h1 class="display-4">Changer la couleur</h1>
+        <hr class="my-4">
+    </div>
+
 
 </div>
 
+<script src="js/main_second.js"></script>
 </body>
 </html>

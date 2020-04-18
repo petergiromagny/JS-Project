@@ -1,3 +1,5 @@
+$js : #ffff00;
+
 body{
   background: #e9ecef;
   p{
@@ -7,7 +9,7 @@ body{
 }
 
 .js-template{
-  background-color: #ffff00 !important;
+  background-color: $js !important;
   color: #000000 !important;
   font-weight: 700;
 }
@@ -17,10 +19,7 @@ body{
 }
 
 .btn-js{
-  background-color: #ffff00 !important;
-  color: #000000 !important;
   font-size: 1.1rem;
-  font-weight: 600;
   transition: .3s;
   &:hover{
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .3);
@@ -29,5 +28,28 @@ body{
   &:active{
     box-shadow: 0 1px 15px 0 rgba(0, 0, 0, .1);
     transition: .3s;
+  }
+}
+
+.calendar{
+  .selected{
+    p{
+      text-align: center;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+    ul{
+      list-style: none;
+      transition: ease-in .3s;
+      li{
+        background-color: $js;
+        font-size: 1.25rem;
+        font-weight: 300;
+        border-radius: 5px;
+        padding: 1rem;
+        width: 13%;
+        margin: 5px 5px 5px 0;
+      }
+    }
   }
 }
