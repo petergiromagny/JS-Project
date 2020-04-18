@@ -43,4 +43,73 @@ function createCalendar(days, choice) {
     }
 }
 
-//https://developer.mozilla.org/fr/docs/Apprendre/JavaScript/Building_blocks/conditionals
+/**
+ *
+ * 		CHANGER DE COULEUR
+ *
+ */
+
+const colorJS = document.querySelector('.js-class button');
+const colorHTML = document.querySelector('.html-class button');
+const colorCSS = document.querySelector('.css-class button');
+const colorSASS = document.querySelector('.sass-class button');
+const tempalteArray = [
+                            'js-template',
+                            'html-template',
+                            'css-template',
+                            'sass-template'
+                        ]
+
+const navColor = document.getElementById('navbar-js');
+const btnNavColor = document.getElementById('btn-navbar-js')
+
+colorJS.addEventListener('click', jsTemplate);
+colorHTML.addEventListener('click', htmlTemplate);
+colorCSS.addEventListener('click', cssTemplate);
+colorSASS.addEventListener('click', sassTemplate);
+
+function jsTemplate() {
+    for (let i = 0; i < tempalteArray.length; i++)
+        navColor.classList.remove(tempalteArray[i]);
+
+    for (let i = 0; i < tempalteArray.length; i++)
+        btnNavColor.classList.remove(tempalteArray[i]);
+
+    navColor.classList.add('js-template');
+    btnNavColor.classList.add('js-template');
+}
+
+function htmlTemplate() {
+    for (let i = 0; i < tempalteArray.length; i++)
+        navColor.classList.remove(tempalteArray[i]);
+
+    for (let i = 0; i < tempalteArray.length; i++)
+        btnNavColor.classList.remove(tempalteArray[i]);
+
+    navColor.classList.add('html-template');
+    btnNavColor.classList.add('html-template');
+}
+
+function cssTemplate() {
+
+    for (let i = 0; i < tempalteArray.length; i++)
+        navColor.classList.remove(tempalteArray[i]);
+
+    for (let i = 0; i < tempalteArray.length; i++)
+        btnNavColor.classList.remove(tempalteArray[i]);
+
+    navColor.classList.add('css-template');
+    btnNavColor.classList.add('css-template');
+
+}
+
+function sassTemplate() {
+    for (let i = 0; i < tempalteArray.length; i++)
+        navColor.classList.remove(tempalteArray[i]);
+
+    for (let i = 0; i < tempalteArray.length; i++)
+        btnNavColor.classList.remove(tempalteArray[i]);
+
+    navColor.classList.add('sass-template');
+    btnNavColor.classList.add('sass-template');
+}

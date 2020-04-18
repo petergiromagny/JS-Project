@@ -25,7 +25,7 @@
 		</div>
 	</div>
 		<div class="col-6 text-right">
-			<a class="btn btn-js js-template" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/JavaScript">MDN | JS</a>
+			<a class="btn btn-template js-template" target="_blank" href="https://developer.mozilla.org/fr/docs/Web/JavaScript">MDN | JS</a>
 		</div>
 
 
@@ -33,32 +33,32 @@
 <div class="jumbotron" id="body">
 
 	<!-- **************************DEVINER UN NOMBRE********************************* -->
+	<div class="guessnbr mt-4">
+		<h1 class="display-4">Deviner un nombre</h1>
+		<hr class="my-4">
+		<p class="lead">Nous avons généré un nombre aléatoire entre 1 et 100, tentez de le deviner en 10 tours maximum. Pour chaque tentative, nous vous dirons si votre estimation est trop ou pas assez élevée.
+		</p>
 
-	<h1 class="display-4">Deviner un nombre</h1>
-	<hr class="my-4">
-	<p class="lead">Nous avons généré un nombre aléatoire entre 1 et 100, tentez de le deviner en 10 tours maximum. Pour chaque tentative, nous vous dirons si votre estimation est trop ou pas assez élevée.
-	</p>
-
-	<div class="form-inline mt-4">
-		<div>
-			<p class="vertical-align">Entrez votre proposition :</p>
+		<div class="form-inline mt-4">
+			<div>
+				<p class="vertical-align">Entrez votre proposition :</p>
+			</div>
+			<div class="form-group mx-sm-3">
+				<label for="guessField" class="sr-only">proposition</label>
+				<input type="text" class="form-control guessField" id="guessField">
+			</div>
+			<input type="submit" value="Valider" id="myBtn" class="guessSubmit">
 		</div>
-		<div class="form-group mx-sm-3">
-			<label for="guessField" class="sr-only">proposition</label>
-			<input type="text" class="form-control guessField" id="guessField">
+
+		<div class="mt-4 resultParas">
+			<p class="alert guesses w-50" role="alert"></p>
+			<p class="alert lastResult w-50" role="alert"></p>
+			<p class="alert lowOrHi w-50" role="alert"></p>
 		</div>
-		<input type="submit" value="Valider" id="myBtn" class="guessSubmit">
+
+		<div class="reset-btn"></div>
 	</div>
 
-	<div class="mt-4 resultParas">
-		<p class="alert guesses w-50" role="alert"></p>
-		<p class="alert lastResult w-50" role="alert"></p>
-		<p class="alert lowOrHi w-50" role="alert"></p>
-	</div>
-
-	<div class="reset-btn">
-
-	</div>
 
 	<!-- **************************GERER UNE LISTE********************************* -->
 
@@ -115,7 +115,7 @@
 			<label for="searching" class="sr-only">recherche</label>
 			<input type="text" class="form-control searching" id="searching">
 		</div>
-		<button class="btn btn-js js-template">Rechercher</button>
+		<button class="btn btn-template js-template">Rechercher</button>
 	</div>
 	<div class="search-list">
 		<ul>
@@ -126,5 +126,6 @@
 </div>
 
 <script src="js/main_first.js"></script>
+<script src="js/main_second.js"></script>
 </body>
 </html>

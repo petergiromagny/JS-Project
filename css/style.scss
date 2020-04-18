@@ -1,24 +1,86 @@
 $js : #ffff00;
+$html : #e54c21;
+$css : #264de4;
+$sass : #c44d8d;
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
 
 body{
   background: #e9ecef;
+  @include scrollbars(.5em, $js);
   p{
     font-size: 1.25rem;
     font-weight: 300;
   }
+  nav{
+    position: fixed !important;
+    width: 100%;
+    z-index: 999;
+  }
 }
 
-.js-template{
-  background-color: $js !important;
-  color: #000000 !important;
+.js-template,
+.btn-js-template{
+  background-color: $js;
+  color: #000000;
   font-weight: 700;
+}
+
+.html-template,
+.btn-html-template{
+  background-color: $html;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.css-template,
+.btn-css-template{
+  background-color: $css;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+
+.sass-template,
+.btn-sass-template{
+  background-color: $sass;
+  color: #FFFFFF;
+  font-weight: 700;
+  button:hover{
+    color: #FFFFFF;
+  }
+}
+
+.html-class .btn:hover,
+.css-class .btn:hover,
+.sass-class .btn:hover{
+  color: white;
 }
 
 .vertical-align{
   margin: 0;
 }
 
-.btn-js{
+.btn-template{
   font-size: 1.1rem;
   transition: .3s;
   &:hover{
@@ -49,6 +111,19 @@ body{
         padding: 1rem;
         width: 13%;
         margin: 5px 5px 5px 0;
+      }
+    }
+  }
+}
+
+.colors{
+  .change-color{
+    justify-content: space-evenly;
+    .js-class, .html-class, .css-class, .sass-class{
+      width: 15%;
+      button{
+        width: 100%;
+        padding: 1rem 0;
       }
     }
   }

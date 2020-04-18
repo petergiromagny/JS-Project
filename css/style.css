@@ -1,24 +1,65 @@
 body {
   background: #e9ecef; }
+  body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em; }
+  body::-webkit-scrollbar-thumb {
+    background: #ffff00; }
+  body::-webkit-scrollbar-track {
+    background: #ffff80; }
+  body {
+    scrollbar-face-color: #ffff00;
+    scrollbar-track-color: #ffff80; }
   body p {
     font-size: 1.25rem;
     font-weight: 300; }
+  body nav {
+    position: fixed !important;
+    width: 100%;
+    z-index: 999; }
 
-.js-template {
-  background-color: #ffff00 !important;
-  color: #000000 !important;
+.js-template,
+.btn-js-template {
+  background-color: #ffff00;
+  color: #000000;
   font-weight: 700; }
+
+.html-template,
+.btn-html-template {
+  background-color: #e54c21;
+  color: #FFFFFF;
+  font-weight: 700; }
+
+.css-template,
+.btn-css-template {
+  background-color: #264de4;
+  color: #FFFFFF !important;
+  font-weight: 700; }
+
+.sass-template,
+.btn-sass-template {
+  background-color: #c44d8d;
+  color: #FFFFFF;
+  font-weight: 700; }
+  .sass-template button:hover,
+  .btn-sass-template button:hover {
+    color: #FFFFFF; }
+
+.html-class .btn:hover,
+.css-class .btn:hover,
+.sass-class .btn:hover {
+  color: white; }
 
 .vertical-align {
   margin: 0; }
 
-.btn-js {
+.btn-template {
   font-size: 1.1rem;
   transition: .3s; }
-  .btn-js:hover {
+  .btn-template:hover {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.3);
     transition: .3s; }
-  .btn-js:active {
+  .btn-template:active {
     box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.1);
     transition: .3s; }
 
@@ -37,5 +78,13 @@ body {
     padding: 1rem;
     width: 13%;
     margin: 5px 5px 5px 0; }
+
+.colors .change-color {
+  justify-content: space-evenly; }
+  .colors .change-color .js-class, .colors .change-color .html-class, .colors .change-color .css-class, .colors .change-color .sass-class {
+    width: 15%; }
+    .colors .change-color .js-class button, .colors .change-color .html-class button, .colors .change-color .css-class button, .colors .change-color .sass-class button {
+      width: 100%;
+      padding: 1rem 0; }
 
 /*# sourceMappingURL=style.css.map */
