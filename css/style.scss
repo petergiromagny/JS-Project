@@ -3,7 +3,7 @@ $html : #e54c21;
 $css : #264de4;
 $sass : #c44d8d;
 
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+@mixin scrollbars($size, $foreground-color, $background-color: mix(#7A7A7A, white,  50%)) {
   // For Google Chrome
   &::-webkit-scrollbar {
     width:  $size;
@@ -82,14 +82,12 @@ body{
 
 .btn-template{
   font-size: 1.1rem;
-  transition: .3s;
+  transition: ease-in .3s;
   &:hover{
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .3);
-    transition: .3s;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
   }
   &:active{
     box-shadow: 0 1px 15px 0 rgba(0, 0, 0, .1);
-    transition: .3s;
   }
 }
 
@@ -102,7 +100,6 @@ body{
     }
     ul{
       list-style: none;
-      transition: ease-in .3s;
       li{
         background-color: $js;
         font-size: 1.25rem;
@@ -111,6 +108,10 @@ body{
         padding: 1rem;
         width: 13%;
         margin: 5px 5px 5px 0;
+        transition: ease-in .15s;
+      &:hover{
+        box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2);
+      }
       }
     }
   }
